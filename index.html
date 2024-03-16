@@ -18,8 +18,8 @@
     >
       <h1 class="mb-0">GearKeep</h1>
       <div>
-        <a class="btn btn-primary ml-2" href="cadastro_peca.html"
-          >Cadastrar Peça</a
+        <a class="btn btn-primary ml-2" href="gerar_relatorio.html"
+          >Relatório</a
         >
         <a class="btn btn-primary ml-2" href="consulta_peca.html"
           >Consultar Peça</a
@@ -27,14 +27,43 @@
       </div>
     </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <form>
+    <div class="container-fluid" style="padding: 0">
+      <div
+        class="row justify-content-center align-items-center"
+        style="min-height: 70vh"
+      >
+        <div class="col">
+          <form class="form-custom">
             <div class="form-group">
-              <labe for="imputNomePeca">Noma da Peça</labe>
-              <input type="text" class="form-control" id="imputNomePeca" />
+              <label for="inputId">ID</label>
+              <input type="text" class="form-control" id="inputId" />
             </div>
+
+            <div class="form-group">
+              <label for="inputNomePeca">Nome da Peça</label>
+              <input type="text" class="form-control" id="inputNomePeca" />
+            </div>
+
+            <div class="form-group">
+              <label for="inputMarca">Marca</label>
+              <input type="text" class="form-control" id="inputMarca" />
+            </div>
+
+            <div class="form-group">
+              <labe for="inputDataaquisicao">Data de aquisição</labe>
+              <input type="date" class="form-control" id="inputDataaquisicao" />
+            </div>
+
+            <div class="form-group">
+              <label for="inputQuantidade">Quantidade</label>
+              <input type="number" class="form-control" id="inputQuantidade" />
+            </div>
+
+            <div class="form-group">
+              <label for="inputPreco">Preço</label>
+              <input type="number" class="form-control" id="inputPreco" />
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
         </div>
       </div>

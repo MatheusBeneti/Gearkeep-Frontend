@@ -1,6 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -8,13 +8,11 @@ header {
   background-color: gray;
   justify-content: flex-start;
   padding: 5px;
-
 }
 
 .site-name {
   margin-right: auto;
   margin-top: 10px;
-
 }
 
 .header-btn {
@@ -33,4 +31,9 @@ header {
 
 .header-btn:hover {
   background-color: rgba(34, 96, 146, 0.808);
+}
+
+.form-custom {
+  margin: auto; /* Centraliza o formulário horizontalmente */
+  max-width: 400px; /* Largura máxima do formulário */
 }
