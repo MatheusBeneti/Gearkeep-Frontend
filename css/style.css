@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+  display: flex;
+  background-color: gray;
+  justify-content: flex-start;
+  padding: 5px;
+
+}
+
+.site-name {
+  margin-right: auto;
+  margin-top: 10px;
+
+}
+
+.header-btn {
+  margin-left: 10px;
+  padding: 5px;
+  background-color: rgba(58, 150, 226, 0.808);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  height: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.header-btn:hover {
+  background-color: rgba(34, 96, 146, 0.808);
+}
