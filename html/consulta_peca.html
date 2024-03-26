@@ -10,12 +10,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    
-
-    <title>GearKeep</title>
+    <title>Document</title>
   </head>
-
-  
   <body>
     <header
       class="bg-dark text-white p-2 d-flex justify-content-between align-items-center"
@@ -25,9 +21,7 @@
         <a class="btn btn-primary ml-2" href="gerar_relatorio.html"
           >Relatório</a
         >
-        <a class="btn btn-primary ml-2" href="/html/consulta_peca.html"
-          >Consultar Peça</a
-        >
+        <a class="btn btn-primary ml-2" href="../index.html">Cadastrar Peça</a>
       </div>
     </header>
 
@@ -37,37 +31,43 @@
         style="min-height: 70vh"
       >
         <div class="col">
-          <form id= "gearForm" class="form-custom">
-            <div class="form-group">
-              <label for="inputId">ID</label>
-              <input type="text" class="form-control" id="inputId" />
-            </div>
+            <form class="form-custom" id="searchForm">
+                <div class="form-group">
+                    <label for="inputId">ID</label>
+                    <input type="text" class="form-control" id="inputId" />
+                    <button type="button" id="searchButton" class="btn btn-primary bg-success text-dark">Procurar</button>
+                </div>
 
             <div class="form-group">
               <label for="inputNomePeca">Nome da Peça</label>
-              <input type="text" class="form-control" id="inputNomePeca" />
+              <input type="text" class="form-control" id="inputNomePeca" disabled />
             </div>
 
             <div class="form-group">
               <label for="inputMarca">Marca</label>
-              <input type="text" class="form-control" id="inputMarca" />
+              <input type="text" class="form-control" id="inputMarca" disabled />
             </div>
 
             <div class="form-group">
               <labe for="inputDataaquisicao">Data de aquisição</labe>
-              <input type="date" class="form-control" id="inputDataaquisicao" />
+              <input type="date" class="form-control" id="inputDataaquisicao" disabled/>
             </div>
 
             <div class="form-group">
               <label for="inputQuantidade">Quantidade</label>
-              <input type="number" class="form-control" id="inputQuantidade" />
+              <input type="number" class="form-control" id="inputQuantidade" disabled/>
             </div>
 
             <div class="form-group">
               <label for="inputPreco">Preço</label>
-              <input type="number" class="form-control" id="inputPreco" />
+              <input type="number" class="form-control" id="inputPreco" disabled/>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary bg-warning text-dark">
+              Atualizar
+            </button>
+            <button type="submit" class="btn btn-primary bg-danger text-dark">
+              Deletar
+            </button>
           </form>
         </div>
       </div>
@@ -88,6 +88,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="js/formSubmit.js"></script>
+    <script src="../js/searchAndUpdateForm.js"></script>
+
+
   </body>
 </html>
