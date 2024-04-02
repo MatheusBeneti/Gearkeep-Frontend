@@ -27,7 +27,7 @@
         const displayArea = document.getElementById("jsonDisplay");
         console.log("batata");
         function fetchAndDisplayJson() {
-          fetch("https://your-api-url/endpoint")
+          fetch("http://localhost:3000/peca")
             .then((response) => response.json())
             .then((data) => {
               const formattedJson = JSON.stringify(data, null, 2);

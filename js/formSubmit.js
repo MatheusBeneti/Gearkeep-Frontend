@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
         console.log('Success:', data);
         // Aqui você pode adicionar qualquer ação após o sucesso do envio
+        alert("Peça adicionada com sucesso");
       })
       .catch((error) => {
         console.error('Error:', error);
