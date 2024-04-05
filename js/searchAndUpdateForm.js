@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchButton.addEventListener('click', function() {
         const inputId = document.getElementById('inputId').value;
-        console.log("batata");
         // Substitua a URL pela sua API real
-        fetch(`/your-api-path/${inputId}`)
+        fetch(`http://localhost:3000/peca/${inputId}`, )
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -15,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 if (data) {
+
+                    console.log('data:', data);
                     // Supondo que "data" é o objeto com as informações da peça
                     document.getElementById('inputNomePeca').value = data.nomePeca || '';
                     document.getElementById('inputMarca').value = data.marca || '';
