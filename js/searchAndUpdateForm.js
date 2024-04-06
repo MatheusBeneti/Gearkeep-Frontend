@@ -75,4 +75,25 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error('Erro durante a atualização:', error);
       });
     });
+
+
+    deleteButton.addEventListener("click", function () {
+      const id = document.getElementById("inputId").value;
+      
+      fetch(`http://localhost:3000/peca/${id}`, {
+          method: 'DELETE'
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(() => {
+          console.log('Exclusão bem-sucedida');
+      })
+      .catch(error => {
+          console.error('Erro durante a exclusão:', error);
+      });
+    });
   });
