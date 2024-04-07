@@ -23,28 +23,40 @@
       }
     </style>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const displayArea = document.getElementById("jsonDisplay");
-        console.log("batata");
-        function fetchAndDisplayJson() {
-          fetch("http://localhost:3000/peca")
+document.addEventListener("DOMContentLoaded", function () {
+    const displayArea = document.getElementById("jsonDisplay");
+
+    function fetchAndDisplayJson() {
+        fetch("http://localhost:3000/peca")
             .then((response) => response.json())
             .then((data) => {
-              const formattedJson = JSON.stringify(data, null, 2);
-              displayArea.innerHTML = `<pre>${formattedJson}</pre>`;
+                let htmlContent = '<ul class="list-unstyled">'; // Começa a lista
+                data.forEach(item => {
+                    
+
+                    htmlContent += `
+                        <li class="mb-2">
+                            <strong>ID:</strong> ${item.id}<br>
+                            <strong>Nome da Peça:</strong> ${item.nomePeca}<br>
+                            <strong>Marca:</strong> ${item.marca}<br>
+                            <strong>Data de Aquisição:</strong> ${item.dataAquisicao}<br>
+                            <strong>Quantidade:</strong> ${item.quantidade}<br>
+                            <strong>Preço:</strong> ${item.preco}<br>
+                        </li>`;
+                });
+                htmlContent += '</ul>'; // Termina a lista
+                displayArea.innerHTML = htmlContent;
             })
             .catch((error) => {
-              console.error("Error fetching JSON:", error);
-              displayArea.innerHTML = `<p>Error loading data.</p>`;
+                console.error("Error fetching JSON:", error);
+                displayArea.innerHTML = `<p>Error loading data.</p>`;
             });
-        }
+    }
 
-        // Chama a função ao carregar a página
-        fetchAndDisplayJson();
-      });
+    // Chama a função ao carregar a página
+    fetchAndDisplayJson();
+});
     </script>
-
-    <script></script>
     <title>Document</title>
   </head>
   <body>
