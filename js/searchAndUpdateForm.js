@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(data => {
           console.log('Atualização bem-sucedida:', data);
+          alert('Atualização bem-sucedida');
+          
       })
       .catch(error => {
           console.error('Erro durante a atualização:', error);
@@ -91,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(() => {
           console.log('Exclusão bem-sucedida');
+          alert('Exclusão bem-sucedida');
       })
       .catch(error => {
           console.error('Erro durante a exclusão:', error);
