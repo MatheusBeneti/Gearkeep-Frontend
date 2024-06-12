@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       console.log(formData)
       // Envia os dados para a API
-      fetch(process.env.API_URL+'peca', {
+      fetch('http://localhost:3000/peca', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
