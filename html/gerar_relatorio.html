@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const displayArea = document.getElementById("jsonDisplay");
 
     function fetchAndDisplayJson() {
-        fetch("http://localhost:3000/peca")
+        fetch("https://gearkeep-sistema-para-gerenciamento-de-estoque.vercel.app/peca")
             .then((response) => response.json())
             .then((data) => {
                 let htmlContent = '<ul class="list-unstyled">'; // Começa a lista
