@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       console.log(formData)
       // Envia os dados para a API
-      fetch('http://localhost:3000/peca', {
+      fetch('https://gearkeep-sistema-para-gerenciamento-de-estoque.vercel.app/peca', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
