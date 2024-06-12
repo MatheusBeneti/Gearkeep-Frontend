@@ -1,5 +1,6 @@
 # Projeto Gearkeep: Gestão de Estoque para Mecânicas (Front-end)
 Gearkeep é um projeto de estudo dedicado à gestão de estoque de peças para oficinas mecânicas.
+Confira o projeto em produção: [https://matheusbeneti.github.io/Gearkeep-Frontend/](https://matheusbeneti.github.io/Gearkeep-Frontend/)
 
 ## Recursos Principais
 - **Manipulação de Peças:**
