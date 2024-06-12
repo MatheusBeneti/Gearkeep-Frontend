@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     searchButton.addEventListener("click", function () {
       const inputId = document.getElementById("inputId").value;
       // Substitua a URL pela sua API real
-      fetch(`http://localhost:3000/peca/${inputId}`)
+      fetch(process.env.API_URL+'peca/${inputId}')
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
           quantidade: quantidade,
           preco: preco
       };
-      fetch(`http://localhost:3000/peca/${id}`, {
+      fetch(process.env.API_URL+'peca/${id}', {
           method: 'PUT',
           headers: {
               'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     deleteButton.addEventListener("click", function () {
       const id = document.getElementById("inputId").value;
       
-      fetch(`http://localhost:3000/peca/${id}`, {
+      fetch(process.env.API_URL+'peca/${id}', {
           method: 'DELETE'
       })
       .then(response => {
